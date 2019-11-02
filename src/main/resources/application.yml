@@ -1,0 +1,34 @@
+#泰康保险(泰康在线财产保险股份有限公司)
+##待上线域名 taikang.com/
+##灾备 http://39.103.175.226/
+##huangye@taikang.com
+server:
+  port: 8080
+  servlet:
+    context-path: /taikang/
+mybatis:
+  type-aliases-package: com.example.entity
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  datasource:
+    url: jdbc:mysql://39.103.175.226:3306/taikang
+    #url: jdbc:mysql://localhost:3306/taikang
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 39.103.175.226
+    port: 6379
+    password:
+    jedis:
+      pool:
+        #最大空闲连接
+        max-idle: 8
+        #最大阻塞等待时间(负值表示无限制)
+        max-wait: -1
+        #最大连接数
+        max-active: 8
+        min-idle: 0
+    #连接超时时间
+    timeout: 5000
