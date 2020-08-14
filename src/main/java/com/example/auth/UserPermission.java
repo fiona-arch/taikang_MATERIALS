@@ -7,5 +7,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)//注解生命周期
 @Documented//生成注解文档
 public @interface UserPermission {
+
     String user() default "";
+
+    //试试git
 }
